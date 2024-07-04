@@ -1,3 +1,73 @@
+# Installation de Docker (Ubuntu)
+
+### Mise à jour des paquets existants
+
+```bash
+sudo apt update
+sudo apt upgrade
+```
+### Installation des prérequis
+
+Assurez-vous que votre système possède les paquets nécessaires pour permettre l'installation de logiciels via HTTPS :
+
+```bash
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+```
+### Ajout de la clé GPG de Docker
+
+Pour garantir l'authenticité des packages Docker téléchargés, ajoutez la clé GPG officielle de Docker à votre système 
+
+```bash
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+
+### Ajout du référentiel Docker aux sources APT
+
+Ajoutez le référentiel Docker aux sources APT de votre système Ubuntu
+
+```bash
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+```
+
+### Installation de Docker Engine
+
+Après avoir ajouté le référentiel, mettez à jour la liste des paquets disponibles et installez Docker :
+
+```bash
+sudo apt update
+sudo apt install docker-ce
+```
+### Vérification de l'installation de Docker
+```bash
+docker --version
+```
+
+
+### Gestion des permissions Docker 
+
+Par défaut, Docker nécessite des privilèges root (utilisateur sudo) pour être exécuté. Pour exécuter des commandes Docker sans utiliser sudo, ajoutez votre utilisateur au groupe docker :
+
+```bash
+sudo usermod -aG docker $USER
+```
+Après avoir ajouté votre utilisateur au groupe docker, déconnectez-vous puis reconnectez-vous ou exécutez la commande suivante pour appliquer les modifications :
+```bash
+newgrp docker
+```
+
+### Démarrage et automatisation de Docker
+
+> :warning: **Warning:** Docker ne démarre pas automatiquement après l'installation sur Ubuntu. Vous pouvez le démarrer manuellement avec la commande suivante :
+
+```bash
+sudo systemctl start docker
+```
+> :bulb: **Tip:** Pour que Docker démarre automatiquement au démarrage du système, utilisez la commande suivante :
+```bash
+sudo systemctl enable docker
+```
+
+
 # Dockerfile
 Deploiement d'un conteneur Ubuntu avec l'application Vulnerable light app récupérer sur Github
 

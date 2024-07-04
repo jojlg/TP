@@ -1,3 +1,10 @@
+# QoS
+## Schéma
+![QoS pkt](https://github.com/jojlg/TP/assets/135955870/46d6b40c-a2d8-49fe-93ab-c82fb11931e6)
+
+
+## Configuration
+
 Interface fa0/1 (vers le réseau droit) 
 
 * Appliquer une politique QoS pour gérer la priorité des flux sortants

@@ -1,4 +1,6 @@
-# Procédure pour lier, cloner et ouvrir un projet GitHub dans VS Code via WSL Installer WSL
+# Procédure pour lier, cloner et ouvrir un projet GitHub dans VS Code via WSL 
+
+## Installer WSL
 
 Dans un Powershell (en admin) `wsl --install`
 ## Installer Git

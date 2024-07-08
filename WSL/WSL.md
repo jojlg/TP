@@ -8,6 +8,32 @@ Dans un Powershell (en admin) `wsl --install`
 sudo apt-get update && sudo apt-get install git Installer VS Code
 ```
 
+## Générez une nouvelle clé SSH :
+
+`ssh-keygen -t ed25519`
+
+Démarrez l'agent SSH : `eval "$(ssh-agent -s)"`
+
+Ajoutez votre clé privée à l'agent SSH :
+`ssh-add ~/.ssh/id_git`
+
+Copiez la clé SSH dans le presse-papiers :
+`cat ~/.ssh/id_git.pub`
+
+* Accédez à GitHub, connectez-vous à votre compte.
+* Allez dans Settings > SSH and GPG keys.
+* Cliquez sur New SSH key, donnez-lui un titre et collez la clé publique dans le champ "Key".
+* Cliquez sur Add SSH key.
+
+
+## Configurer le dépôt Git pour utiliser SSH
+Ouvrez le terminal intégré de VS Code.
+Changez l'URL du dépôt pour utiliser SSH :
+
+`git remote set-url origin git@github.com:<your-username>/<your-repo>.git`
+
+
+
 ## Téléchargez et installez VS Code
 
 https://code.visualstudio.com/
@@ -25,13 +51,14 @@ git config --global user.name "VotreNom"
 git config --global user.email "VotreEmail@example.com" 
 ```
 ## Cloner votre projet GitHub git clone 
-https://github.com/votre-nom-dutilisateur/votre-repo.git
+* HTTPS ou SSH :
+`https://github.com/votre-nom-dutilisateur/votre-repo.git`
 
 * Remplacez votre-nom-dutilisateur par votre nom d'utilisateur GitHub et votre-repo par le nom du dépôt.
 
 
 ## Ouvrir VS Code depuis WSL
-* Naviguer dans le répertoire du projet cloné
+* Naviguer dans le répertoire du projet cloné :
 
 `cd votre-repo` 
 

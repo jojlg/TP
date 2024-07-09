@@ -26,13 +26,6 @@ Copiez la clé SSH dans le presse-papiers :
 * Cliquez sur Add SSH key.
 
 
-## Configurer le dépôt Git pour utiliser SSH
-Ouvrez le terminal intégré de VS Code.
-Changez l'URL du dépôt pour utiliser SSH :
-
-`git remote set-url origin git@github.com:<your-username>/<your-repo>.git`
-
-
 
 ## Téléchargez et installez VS Code
 
@@ -40,6 +33,11 @@ https://code.visualstudio.com/
 
 ## Installer l'extension WSL pour VS Code
 * Dans VS Code, allez dans l'onglet Extensions (Ctrl+Shift+X) et recherchez `Remote - WSL` puis installez-la.
+
+
+
+* Pour cet exemple, nous utiliserons le projet "Awesome Python" disponible à l'adresse suivante :
+https://github.com/vinta/awesome-python.
 
 ## Lier votre projet GitHub
 ## Configurer Git
@@ -50,14 +48,31 @@ git config --global user.name >VotreNomGit<
 ```bash
 git config --global user.email "VotreEmail@example.com" 
 ```
-## Cloner votre projet GitHub git clone 
-* HTTPS ou SSH :
 
-Exemple : 
+## Cloner le projet
+* Pour cloner le projet, ouvrez votre terminal et exécutez la commande git clone suivie de l'URL du projet GitHub. Cela téléchargera une copie locale du projet sur votre ordinateur.
 
-`git clone https://github.com/votre-nom-dutilisateur/votre-repo.git`
+```bash
+git clone https://github.com/vinta/awesome-python.git
+```
 
-* Accédez au répertoire du projet cloné :
+
+## Accéder au répertoire du projet cloné
+* Après le clonage, vous devez naviguer dans le répertoire du projet pour commencer à travailler dessus. Utilisez la commande cd pour entrer dans le répertoire cloné.
+
+```bash
+cd awesome-python
+```
+
+
+## Créer une nouvelle branche pour vos modifications
+* Il est conseillé de créer une nouvelle branche avant de faire des modifications pour ne pas altérer la branche principale (main ou master). Cela vous permet de travailler sur une copie indépendante de la branche principale.
+
+```bash
+git checkout -b my-awesome-python
+```
+
+## Accédez au répertoire du projet cloné :
 
 ```bash
 cd votre-repo
@@ -66,30 +81,36 @@ cd votre-repo
 code .
 ```
 
-## Créer une nouvelle branche pour vos modifications
-* Il est recommandé de créer une nouvelle branche pour vos modifications :
+
+## Ajouter les fichiers modifiés et committer les changements
+* Une fois les modifications terminées, vous devez les ajouter à l'index de Git avant de les committer. Utilisez git add pour ajouter les fichiers modifiés, puis git commit pour enregistrer vos changements avec un message de commit descriptif.
 
 ```bash
-git checkout -b nom-de-la--nouvelle-branche
+git add .
+git commit -m "Ajout de nouvelles ressources à Awesome Python"
 ```
 
-## Utilisation quotidienne
+## Publier vos modifications sur GitHub
+* Si vous souhaitez publier vos modifications sur votre propre dépôt GitHub, commencez par créer un nouveau dépôt sur GitHub. Notez l'URL de votre nouveau dépôt.
 
-> ⚠️ Après avoir fait vos modifications, vous devez ajouter les fichiers modifiés et committer vos changements :
-
-Ajouter des fichiers : `git add .`
-
-Valider des modifications : `git commit -m "Votre message de commit"`
-
-Si vous souhaitez publier vos modifications sur votre propre dépôt GitHub, vous devrez d'abord créer un nouveau dépôt sur GitHub. Ensuite, ajoutez ce dépôt en tant que remote et poussez vos modifications :
+* Ensuite, ajoutez ce dépôt en tant que remote (origin) et poussez vos modifications vers votre dépôt GitHub. Remplacez votre-utilisateur par votre nom d'utilisateur GitHub.
 
 ```bash
-git remote add origin https://github.com/votre-utilisateur/projet.git
-git push -u origin nouvelle-branche-projet
+git remote add origin https://github.com/votre-utilisateur/awesome-python.git
+git push -u origin my-awesome-python
 ```
 
-Pousser les modifications vers GitHub : `git push origin main`
+Pousser les modifications vers GitHub (branche main): `git push origin main`
 
 
-## Créer une Pull Request
-Si vous pensez que vos modifications peuvent être utiles à la communauté, vous pouvez créer une Pull Request vers le dépôt original.
+
+
+
+## Configurer le dépôt Git pour utiliser SSH
+* Changez l'URL du dépôt pour utiliser SSH :
+
+`git remote set-url origin git@github.com:<your-username>/<your-repo>.git`
+
+
+
+

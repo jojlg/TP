@@ -65,10 +65,25 @@ Exemple :
 
 `code . `
 
+## Créer une nouvelle branche pour vos modifications
+* Il est recommandé de créer une nouvelle branche pour vos modifications :
+
+```bash
+git checkout -b nom-de-la--nouvelle-branche
+```
+
 ## Utilisation quotidienne
+
+> ⚠️ Après avoir fait vos modifications, vous devez ajouter les fichiers modifiés et committer vos changements :
 
 Ajouter des fichiers : `git add .`
 
 Valider des modifications : `git commit -m "Votre message de commit"`
 
+Si vous souhaitez publier vos modifications sur votre propre dépôt GitHub, vous devrez d'abord créer un nouveau dépôt sur GitHub. Ensuite, ajoutez ce dépôt en tant que remote et poussez vos modifications :
+
 Pousser les modifications vers GitHub : `git push origin main`
+
+
+## Créer une Pull Request
+Si vous pensez que vos modifications peuvent être utiles à la communauté, vous pouvez créer une Pull Request vers le dépôt original.

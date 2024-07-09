@@ -83,6 +83,11 @@ Valider des modifications : `git commit -m "Votre message de commit"`
 
 Si vous souhaitez publier vos modifications sur votre propre dépôt GitHub, vous devrez d'abord créer un nouveau dépôt sur GitHub. Ensuite, ajoutez ce dépôt en tant que remote et poussez vos modifications :
 
+```bash
+git remote add origin https://github.com/votre-utilisateur/projet.git
+git push -u origin nouvelle-branche-projet
+```
+
 Pousser les modifications vers GitHub : `git push origin main`
 
 

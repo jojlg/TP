@@ -45,7 +45,7 @@ https://code.visualstudio.com/
 ## Configurer Git
 * Dans le terminal WSL, exécutez :
 ```bash
-git config --global user.name "VotreNom" 
+git config --global user.name >VotreNomGit< 
 ```
 ```bash
 git config --global user.email "VotreEmail@example.com" 
@@ -57,13 +57,14 @@ Exemple :
 
 `git clone https://github.com/votre-nom-dutilisateur/votre-repo.git`
 
+* Accédez au répertoire du projet cloné :
 
-## Ouvrir VS Code depuis WSL
-* Naviguer dans le répertoire du projet cloné :
-
-`cd votre-repo` 
-
-`code . `
+```bash
+cd votre-repo
+```
+```bash
+code .
+```
 
 ## Créer une nouvelle branche pour vos modifications
 * Il est recommandé de créer une nouvelle branche pour vos modifications :

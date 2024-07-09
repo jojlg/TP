@@ -112,5 +112,13 @@ Pousser les modifications vers GitHub (branche main): `git push origin main`
 `git remote set-url origin git@github.com:<your-username>/<your-repo>.git`
 
 
-
+# Récapitulatif
+* Choisir le projet : Identifier et noter l'URL du projet à cloner.
+* Cloner le projet : Utiliser git clone <URL> pour copier le projet localement.
+* Accéder au répertoire : Naviguer dans le répertoire cloné avec cd.
+* Créer une branche : Créer une nouvelle branche pour les modifications avec git checkout -b <branch-name>.
+* Faire les modifications : Modifier le code ou les fichiers selon vos besoins.
+* Ajouter et committer : Ajouter (git add .) et committer (git commit -m <message>) les changements.
+* Publier sur GitHub : Ajouter le dépôt distant et pousser les changements avec git remote add origin <URL> et git push -u origin <branch-name>.
+* Créer une Pull Request : Optionnellement, proposer vos modifications au dépôt original via une Pull Request.
 

@@ -52,9 +52,10 @@ git config --global user.email "VotreEmail@example.com"
 ```
 ## Cloner votre projet GitHub git clone 
 * HTTPS ou SSH :
-`https://github.com/votre-nom-dutilisateur/votre-repo.git`
 
-* Remplacez votre-nom-dutilisateur par votre nom d'utilisateur GitHub et votre-repo par le nom du dépôt.
+Exemple : 
+
+`git clone https://github.com/votre-nom-dutilisateur/votre-repo.git`
 
 
 ## Ouvrir VS Code depuis WSL

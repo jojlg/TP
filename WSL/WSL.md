@@ -63,22 +63,15 @@ git clone https://github.com/vinta/awesome-python.git
 ```bash
 cd awesome-python
 ```
-
+```bash
+code .
+```
 
 ## Créer une nouvelle branche pour vos modifications
 * Il est conseillé de créer une nouvelle branche avant de faire des modifications pour ne pas altérer la branche principale (main ou master). Cela vous permet de travailler sur une copie indépendante de la branche principale.
 
 ```bash
 git checkout -b my-awesome-python
-```
-
-## Accédez au répertoire du projet cloné :
-
-```bash
-cd votre-repo
-```
-```bash
-code .
 ```
 
 
